@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:bhv="clr-namespace:B4.EE.VanLookManu.Behaviors"
+             mc:Ignorable="d"
+             BackgroundColor="#7289DA"
+             Title="UserActivities"
+             x:Class="B4.EE.VanLookManu.Pages.UserActivityPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Refresh" Priority="1" Order="Primary"
+                     Command="{Binding RefreshActivity}"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <ListView ItemsSource="{Binding CurrentUsers}"
+                    HasUnevenRows="False" RowHeight="60" >
+                <ListView.Behaviors>
+                    <bhv:EventToCommandBehavior 
+                        EventName="ItemTapped"  
+                        Command="{Binding OpenUserActivity}"
+                        CommandParameter="{Binding .}"
+                       />
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout StyleClass="listitem" BackgroundColor="{DynamicResource DiscordColorPrimary}" HeightRequest="50">
+                                <Label Text="{Binding Username}" Style="{DynamicResource stackLabelsUsername}"/>
+                                <Label Text="{Binding Activity.Name}" Style="{DynamicResource stackLabelsActivity}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

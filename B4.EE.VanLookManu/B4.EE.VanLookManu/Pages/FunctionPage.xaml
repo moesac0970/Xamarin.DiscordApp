@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="B4.EE.VanLookManu.Pages.FunctionPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" >
+            <Label FontSize="Title" Style="{DynamicResource TitleTextColor}" HorizontalTextAlignment="Center">this is the function page</Label>
+
+            <Label Text="Choose your function" HorizontalTextAlignment="Center" HeightRequest="80" Style="{DynamicResource TitleTextColor}">
+                <Label.FontFamily >
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Lobster-Regular" />
+                        <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
+                        <On Platform="UWP" Value="Assets/Fonts/RockSalt-Regular.ttf" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Button Style="{DynamicResource StandardButtonStyle}" Text="send location to discord" Command="{Binding SendLocationCommand}"></Button>
+            <Button Style="{DynamicResource StandardButtonStyle}" Text="get users from api" Command="{Binding OpenUsersCommand}" ></Button>
+            <Button Style="{DynamicResource StandardButtonStyle}" Text="activate client" Command="{Binding StartBot}"></Button>
+            <Button Style="{DynamicResource StandardButtonStyle}" Text="Go to activities" Command="{Binding OpenUserActivities}"></Button>
+            <Button Style="{DynamicResource StandardButtonStyle}" Text="stop the bot" Command="{Binding StopBot}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="#7289DA"
+             Title="{Binding Username}"
+             x:Class="B4.EE.VanLookManu.Pages.UserDetailPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{DynamicResource DiscordColorPrimary}" >
+            <Label Text="Discriminator" Style="{DynamicResource stackLabelsUsername}" />
+            <Label Text="{Binding Discriminator}" Style="{DynamicResource stackLabelsActivity}" />
+
+            <Label Text="IsBot" Style="{DynamicResource stackLabelsUsername}" />
+            <Label Text="{Binding IsBot}" Style="{DynamicResource stackLabelsActivity}" />
+
+            <Label Text="Username" Style="{DynamicResource stackLabelsUsername}" />
+            <Label Text="{Binding Username}" Style="{DynamicResource stackLabelsActivity}" />
+
+            <Label Text="CreatedAt" Style="{DynamicResource stackLabelsUsername}" />
+            <Label Text="{Binding CreatedAt}" Style="{DynamicResource stackLabelsActivity}" />
+
+            <Label Text="Id" Style="{DynamicResource stackLabelsUsername}" />
+            <Label Text="{Binding Id}" Style="{DynamicResource stackLabelsActivity}" />
+
+            <Label Text="Activity" Style="{DynamicResource stackLabelsUsername}" />
+            <Label Text="{Binding Activity}" Style="{DynamicResource stackLabelsActivity}" />
+
+            <Label Text="Status" Style="{DynamicResource stackLabelsUsername}" />
+            <Label Text="{Binding Status}" Style="{DynamicResource stackLabelsActivity}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

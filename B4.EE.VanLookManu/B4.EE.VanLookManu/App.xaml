@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="B4.EE.VanLookManu.App">
+    <Application.Resources>
+        <!-- colors -->
+        <Color x:Key="PageBackgroundColor">#add8e6</Color>
+
+        <Color x:Key="StandardButtonTextColor">#fef3cd</Color>
+        <Color x:Key="StandardButtonBackColor">#f67d15</Color>
+        <Style x:Key="StandardButtonStyle" TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="TextColor" Value="{StaticResource StandardButtonTextColor}" />
+            <Setter Property="BackgroundColor" Value="{StaticResource StandardButtonBackColor}" />
+        </Style>
+
+        
+        <!-- ContentPage Style -->
+
+        <Color x:Key="TitleTextColor">#003333</Color>
+
+        <Style x:Key="TitleLabelStyle" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="TextColor" Value="{StaticResource TitleTextColor}" />
+            <Setter Property="FontSize" Value="Medium"/>
+        </Style>
+
+
+        <OnPlatform x:Key="PlatformContentPagePadding" x:TypeArguments="Thickness">
+            <On Platform="iOS">5, 20, 5, 5</On>
+            <On Platform="Android">5, 0, 5, 0</On>
+            <On Platform="Windows">5, 0, 5, 0</On>
+        </OnPlatform>
+        
+        <!-- discordissh style -->
+        <Color x:Key="DiscordColorPrimary">#7289DA</Color>
+        <Color x:Key="DiscordColorSecondary">#2C2F33</Color>
+        <Color x:Key="DiscordColorTertiary">#D3D3D3</Color>
+
+
+        <Style x:Key="stackLabelsUsername" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="TextColor" Value="#FFFFFF"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource DiscordColorSecondary}"/>
+        </Style>
+
+        <Style x:Key="stackLabelsActivity" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            <Setter Property="TextColor" Value="{StaticResource DiscordColorSecondary}"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource DiscordColorTertiary}"/>
+        </Style>
+
+
+
+    </Application.Resources>
+</Application>
